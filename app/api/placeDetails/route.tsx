@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     });
     const prompt = `
       Provide travel details for: ${message}. 
-      Return JSON with these keys: "name", "location", "top_attractions" (as an array), and "best_time_to_visit".
+      Return JSON with these keys: "name", "location", "description", "top_attractions" (as an array), "best_time_to_visit", "image_url_google".
     `;
     const result = await model.generateContent(prompt);
     const response = await result.response;
